@@ -1,0 +1,160 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio - Clean Minimal</title>
+    <meta
+      name="description"
+      content="Minimalistisches Portfolio mit Videos, Screenshots und Lebenslauf."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="topbar">
+      <div class="brand">AD</div>
+      <nav class="nav">
+        <a href="#arbeiten">Arbeiten</a>
+        <a href="#screens">Screenshots</a>
+        <a href="#lebenslauf">Lebenslauf</a>
+      </nav>
+      <button class="cta" data-scroll="#kontakt">Kontakt</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio</p>
+          <h1>
+            Minimalistisch. Praezise.
+            <span class="accent">Kreativ.</span>
+          </h1>
+          <p class="lead">
+            Ich baue digitale Erlebnisse mit klarer Struktur, starkem Look und
+            exakter Umsetzung. Hier siehst du, was ich alles kann.
+          </p>
+          <div class="hero-actions">
+            <button class="primary hero-primary" data-scroll="#arbeiten"><span>Projekte ansehen</span><i aria-hidden="true">→</i></button>
+            <a class="ghost" href="#lebenslauf">Lebenslauf</a>
+          </div>
+          <div class="meta">
+            <div>
+              <span class="meta-label">Fokus</span>
+              <span>UI/UX - Motion - Web</span>
+            </div>
+            <div>
+              <span class="meta-label">Standort</span>
+              <span>Salzburg, Oesterreich</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="stat">
+            <p class="stat-num" data-target="50" data-suffix="+">0</p>
+            <p class="stat-label">Projekte</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num" data-target="5" data-suffix="+">0</p>
+            <p class="stat-label">Jahre</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num" data-target="98" data-suffix="%">0</p>
+            <p class="stat-label">Kundenzufriedenheit</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="arbeiten" class="section">
+        <div class="section-header">
+          <h2>Videos</h2>
+          <p>Klicke auf ein Projekt, um das Video abzuspielen.</p>
+        </div>
+        <div class="grid" id="video-grid"></div>
+      </section>
+
+      <section id="screens" class="section alt">
+        <div class="section-header">
+          <h2>Screenshots</h2>
+          <p>Nach Programmen organisiert: Blender, After Effects, Photoshop und mehr.</p>
+        </div>
+        <div class="program-tabs" id="program-tabs"></div>
+        <div class="masonry" id="shot-grid"></div>
+      </section>
+
+      <section id="lebenslauf" class="section">
+        <div class="section-header">
+          <h2>Lebenslauf</h2>
+          <p>Clean Preview wie ein Bild, ohne PDF-Viewer.</p>
+        </div>
+        <div class="resume">
+          <div class="resume-view">
+            <img
+              class="resume-image"
+              src="assets/cv/lebenslauf-preview.png"
+              alt="Lebenslauf Vorschau"
+              loading="lazy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"
+            />
+            <div class="resume-fallback" style="display: none">
+              <p>Preview-Bild fehlt</p>
+              <span>Lege assets/cv/lebenslauf-preview.png ab</span>
+            </div>
+          </div>
+          <div class="resume-meta">
+            <h3>Profil</h3>
+            <p>
+              Kreativer Fokus, praezise Ausfuehrung und ein Auge fuer Details.
+              Strukturiert, schnell, und immer auf den Punkt.
+            </p>
+            <a
+              class="primary"
+              href="assets/cv/Lebenslauf_Adam_Elakkam%20(1).pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >PDF ansehen</a
+            >
+            <a class="ghost" href="assets/cv/Lebenslauf_Adam_Elakkam%20(1).pdf" download
+              >PDF herunterladen</a
+            >
+            <div class="resume-tags">
+              <span>Webdesign</span>
+              <span>Prototyping</span>
+              <span>Branding</span>
+              <span>Motion</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" class="section contact">
+        <div class="contact-card">
+          <h2>Let's build something clean.</h2>
+          <p>Schreib mir fuer Projekte, Kooperationen oder schnelle Feedback-Runden.</p>
+          <div class="contact-actions">
+            <a class="primary" href="mailto:hello@email.de">hello@email.de</a>
+            <a class="ghost" href="https://www.linkedin.com">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="modal">
+      <div class="modal-inner">
+        <button class="close" id="close-modal" aria-label="Schliessen">&times;</button>
+        <div class="modal-media" id="modal-media"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
